@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>DRAXZ PAYMENTL</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- BACKGROUND EFFECT CANVASES -->
+  <canvas id="warpCanvas"></canvas>
+  <canvas id="crystalCanvas"></canvas>
+  <canvas id="fogCanvas"></canvas>
+  <canvas id="starCanvas"></canvas>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="title">PAYMENT DRAXZ</div>
+
+    <!-- MODE C EFFECT BUTTONS -->
+    <div class="effect-panel">
+      <div class="effect-btn" onclick="setEffect('warp')">🚀 Warp Galaxy</div>
+      <div class="effect-btn" onclick="setEffect('crystal')">💎 Crystal Rain</div>
+      <div class="effect-btn" onclick="setEffect('fog')">☁ Plasma Fog</div>
+      <div class="effect-btn" onclick="setEffect('star')">✨ Starfield</div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="card">
+      <i class="fa-solid fa-credit-card"></i> DANA<br>
+      <b id="danaNum">085804716393</b>
+      <div class="buttons">
+        <button onclick="copyText('danaNum')">Salin</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-mobile"></i> OVO<br>
+      <b id="ovoNum">FALSE</b>
+      <div class="buttons">
+        <button onclick="copyText('ovoNum')">Salin</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-wallet"></i> GOPAY<br>
+      <b id="gopayNum">FALSE</b>
+      <div class="buttons">
+        <button onclick="copyText('gopayNum')">Salin</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-qrcode"></i> QRIS<br>
+      <img src="qris.jpg" id="qrisImg" class="qr" alt="QRIS">
+      <div class="buttons">
+        <button onclick="downloadQR()">Download QR</button>
+      </div>
+    </div>
+
+    <!-- THEME SWITCH -->
+    <div class="theme-box">
+      <b>Ganti Tema Warna:</b><br><br>
+      <button class="theme-btn blue" onclick="setTheme('#00aaff','#66d1ff')">Biru</button>
+      <button class="theme-btn red" onclick="setTheme('#ff003b','#ff6b8e')">Merah</button>
+      <button class="theme-btn green" onclick="setTheme('#00ff8d','#6effc1')">Hijau</button>
+      <button class="theme-btn orange" onclick="setTheme('#ff7b00','#ffb86b')">Oranye</button>
+    </div>
+  </div>
+
+  <footer>© 2025 DRAXZ OFFC </footer>
+
+  <!-- external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
